@@ -2,46 +2,13 @@
 <html lang="en">
 
 <head>
-
-
   <meta charset="UTF-8">
-<!-- SEO meta tags -->
-<meta name="google-site-verification" content="ASaxdC14qJEx6xaJldWMyiKWtJUGXiFRpzc-nSBVo1I" />
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Balaji E",
-  "jobTitle": "Java Developer",
-  "url": "https://www.balajie.in",
-  "image": "https://www.balajie.in/bala.jpg",
-  "sameAs": [
-    "https://www.linkedin.com/in/balajie-it",
-    "https://github.com/CodeByBalajiE"
-  ],
-  "description": "Aspiring Java Developer skilled in Java, Spring Boot, and full-stack technologies."
-}
-</script>
-
-
-
-<meta name="description" content="Balaji E is an aspiring Java Developer with expertise in Java, Spring Boot, MySQL, and full-stack development. Check out his portfolio, projects, and resume.">
-<meta name="keywords" content="Balaji E, Java Developer, Java Portfolio, Spring Boot Developer, Full Stack Developer, Chennai Java Developer, Balaji Resume, Java Projects">
-<meta name="author" content="Balaji E">
-<meta name="robots" content="index, follow">
-<meta property="og:title" content="Balaji E - Java Developer">
-<meta property="og:description" content="Explore the portfolio of Balaji E, a passionate Java developer skilled in backend and full-stack development.">
-<meta property="og:image" content="/bala.jpg">
-<meta property="og:url" content="https://www.balajie.in">
-<meta property="og:type" content="website">
-
-
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Balaji E - Java Developer</title>
+  <title>Balaji E - Java Developer Portfolio</title>
 
   <!-- favicon -->
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
   <!-- custom css link -->
   <link rel="stylesheet" href="./assets/css/style.css">
@@ -60,17 +27,23 @@
     <aside class="sidebar" data-sidebar>
       <div class="sidebar-info">
         <figure class="avatar-box">
-          <img src="bala.jpg" alt="Balaji E" width="80"> <!-- UPDATE YOUR PHOTO -->
+          <img src="/bala.jpg" alt="Balaji E" width="80"> <!-- UPDATE YOUR PHOTO -->
         </figure>
         <div class="info-content">
           <h1 class="name" title="Balaji E">Balaji E</h1>
           <p class="title">Aspiring Java Developer</p> <!-- Updated Title -->
         </div>
+        
         <button class="info_more-btn" data-sidebar-btn>
           <span>Show Contacts</span>
           <ion-icon name="chevron-down"></ion-icon>
         </button>
       </div>
+      <!-- === ADDED QUOTE === -->
+      <blockquote class="personal-quote">
+        "What breaks you today will build you tomorrow."
+      </blockquote>
+      <!-- === END OF ADDED QUOTE === -->
 
       <div class="sidebar-info_more">
         <div class="separator"></div>
@@ -100,14 +73,14 @@
             <div class="icon-box"><ion-icon name="logo-linkedin"></ion-icon></div>
             <div class="contact-info">
               <p class="contact-title">LinkedIn</p>
-              <a href="https://www.linkedin.com/in/your-profile-url" target="_blank" class="contact-link">linkedin.com/in/balajie-it</a> <!-- UPDATE LINK -->
+              <a href="https://www.linkedin.com/in/balajie-it" target="_blank" class="contact-link">linkedin.com/in/balajie-it</a> <!-- UPDATE LINK -->
             </div>
           </li>
            <li class="contact-item">
             <div class="icon-box"><ion-icon name="logo-github"></ion-icon></div>
             <div class="contact-info">
               <p class="contact-title">GitHub</p>
-              <a href="https://github.com/your-username" target="_blank" class="contact-link">github.com/CodeByBalajiE</a> <!-- UPDATE LINK -->
+              <a href="https://github.com/CodeByBalajiE" target="_blank" class="contact-link">github.com/CodeByBalajiE</a> <!-- UPDATE LINK -->
             </div>
           </li>
         </ul>
@@ -120,15 +93,17 @@
     <div class="main-content">
 
       <!-- NAVBAR -->
-      <nav class="navbar">
-        <ul class="navbar-list">
-          <li class="navbar-item"><button class="navbar-link active" data-nav-link="about">About</button></li>
-          <li class="navbar-item"><button class="navbar-link" data-nav-link="resume">Resume</button></li>
-          <li class="navbar-item"><button class="navbar-link" data-nav-link="portfolio">Portfolio</button></li>
-          <li class="navbar-item"><button class="navbar-link" data-nav-link="certifications">Certifications</button></li>
-          <li class="navbar-item"><button class="navbar-link" data-nav-link="contact">Contact</button></li>
-        </ul>
-      </nav>
+<nav class="navbar">
+  <ul class="navbar-list">
+    <li class="navbar-item"><button class="navbar-link active" data-nav-link="about">About</button></li>
+    <li class="navbar-item"><button class="navbar-link" data-nav-link="resume">Resume</button></li>
+    <!-- ADDED LEETCODE NAV ITEM -->
+    <li class="navbar-item"><button class="navbar-link" data-nav-link="leetcode">LeetCode</button></li>
+    <li class="navbar-item"><button class="navbar-link" data-nav-link="portfolio">Portfolio</button></li>
+    <li class="navbar-item"><button class="navbar-link" data-nav-link="certifications">Certifications</button></li>
+    <li class="navbar-item"><button class="navbar-link" data-nav-link="contact">Contact</button></li>
+  </ul>
+</nav>
 
            <!-- ABOUT -->
            <article class="about active" data-page="about">
@@ -142,6 +117,9 @@
                 I enjoy the process of breaking down complex problems and applying logical thinking to find effective solutions. The challenge of debugging and optimizing code is something I find genuinely rewarding. I believe in writing clean, readable code and continuously strive to improve my skills through practice and learning.
               </p>
             </section>
+             
+
+
     
             <!-- Added Section: Key Strengths & Interests -->
             <section class="about-highlights">
@@ -212,7 +190,7 @@
                  Right now, I'm deepening my understanding of <strong>Spring Boot</strong> for building robust backend applications, practicing more complex <strong>SQL queries</strong>, and improving my proficiency with <strong>Git</strong> for effective version control and collaboration. I am also exploring basic cloud concepts (like AWS or Azure) to understand modern deployment practices.
                </p>
             </section>
-    
+    <br>
     
             <section class="about-text">
               <p>
@@ -220,7 +198,7 @@
               </p>
             </section>
     
-          </article>1 
+          </article>
 
       <!-- RESUME -->
       <article class="resume" data-page="resume">
@@ -293,6 +271,56 @@
           </ul>
         </section>
       </article>
+
+       <!-- === ADDED LEETCODE ARTICLE === -->
+       <article class="leetcode" data-page="leetcode">
+        <header>
+          <br>
+          <h2 class="h2 article-title">LeetCode Journey</h2>
+        </header>
+      
+        <section class="leetcode-section">
+          <p style="margin-bottom: 30px; text-align: center; color: var(--light-gray-70);">
+            My progress and dedication on LeetCode, showcasing problem-solving skills.
+          </p>
+      
+          <div class="leetcode-grid">
+      
+            <!-- LeetCode Stats Card -->
+            <div class="content-card leetcode-card">
+              <div class="rank-badge">
+                Top 5% Ranker <!-- Or fetch dynamically if possible -->
+              </div>
+              <h3 class="h3 leetcode-card-title">Coding Stats</h3>
+              <figure class="leetcode-figure">
+                <img class="leetcode-img" 
+                  src="https://leetcard.jacoblin.cool/balajie_it?ext=contest" 
+                  alt="Balaji E LeetCode Stats" 
+                  onerror="this.onerror=null; this.src='assets/leetcode-backup-contest.png';">
+              </figure>
+              <a class="form-btn leetcode-button" href="https://leetcode.com/u/balajie_it/" target="_blank" rel="noopener noreferrer" style="margin: 20px auto 0; display: inline-block; text-decoration: none;">
+                <ion-icon name="eye-outline"></ion-icon>
+                <span>View Profile</span>
+              </a>
+            </div>
+      
+            <!-- LeetCode Heatmap Card -->
+            <div class="content-card leetcode-card">
+              <h3 class="h3 leetcode-card-title">Practice Consistency</h3>
+              <figure class="leetcode-figure">
+                <img class="leetcode-img" 
+                  src="https://leetcard.jacoblin.cool/balajie_it?ext=heatmap" 
+                  alt="Balaji E LeetCode Heatmap" 
+                  onerror="this.onerror=null; this.src='assets/leetcode-backup-heatmap.png';">
+              </figure>
+              <p class="leetcode-caption">Daily problem-solving activity heatmap.</p>
+            </div>
+      
+          </div>
+      
+        </section>
+      </article>
+  <!-- === END OF LEETCODE ARTICLE === -->
 
             <!-- PORTFOLIO -->
             <article class="portfolio" data-page="portfolio">
@@ -406,7 +434,7 @@
             <!-- End of Portfolio Article -->
 
       <!-- CERTIFICATIONS -->
-      <article class="certifications" data-page="certifications">
+      <article class="certifications" data-page="certifications"><br>
         <header><h2 class="h2 article-title">Certifications & Courses</h2></header>
         <section class="timeline">
            <div class="title-wrapper"><div class="icon-box"><ion-icon name="ribbon-outline"></ion-icon></div><h3 class="h3">Credentials</h3></div>
@@ -414,28 +442,28 @@
              <!-- UPDATE WITH YOUR ACTUAL CERTIFICATIONS/COURSES -->
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">Java Programming Masterclass</h4>
-              <span>Udemy / Coursera / NPTEL - [Completion Year]</span>
+              <span>2024</span>
               <p class="timeline-text">
                 Comprehensive course covering core Java concepts, OOP principles, collections framework, and basic I/O operations.
               </p>
             </li>
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">Introduction to SQL</h4>
-              <span>[Platform Name, e.g., HackerRank, Codecademy] - [Completion Date/Year]</span>
+              <span>2024</span>
               <p class="timeline-text">
                 Learned fundamental SQL commands, querying databases, joins, and basic database design concepts.
               </p>
             </li>
              <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">[Relevant Workshop or University Course]</h4>
-              <span>[Institution/Provider] - [Date/Year]</span>
+              <h4 class="h4 timeline-item-title">Python</h4>
+              <span>2024</span>
               <p class="timeline-text">
-                [Brief description of topics covered, e.g., Attended a workshop on Introduction to Spring Boot, covering basic setup and dependency injection.]
+
               </p>
             </li>
              <li class="timeline-item">
               <h4 class="h4 timeline-item-title">Git & GitHub Fundamentals</h4>
-              <span>[Platform Name] - [Completion Date/Year]</span>
+              <span>Udemy-2025</span>
               <p class="timeline-text">
                 Covered version control concepts, branching, merging, and collaborating using Git and GitHub.
               </p>
@@ -443,6 +471,7 @@
           </ol>
         </section>
       </article>
+      
 
       <!-- CONTACT -->
       <article class="contact" data-page="contact">
