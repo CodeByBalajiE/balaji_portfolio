@@ -160,7 +160,25 @@ textarea { resize: vertical; }
 :focus:not(:focus-visible) {
   outline: none;
 }
+/*-----------------------------------*\
+  # RESUME DOWNLOAD (in Contact)
+\*-----------------------------------*/
+.resume-download-contact {
+   margin-top: calc(var(--spacing-unit) * 5); /* 40px */
+   padding-top: calc(var(--spacing-unit) * 3); /* 24px */
+   border-top: 1px solid var(--color-border);
+   text-align: center; /* Center the button */
+}
 
+.resume-download-contact .btn {
+   /* Uses existing .btn and .btn-secondary styles */
+   /* Add specific overrides if needed */
+   font-size: var(--fs-7); /* Slightly smaller text maybe */
+}
+
+.resume-download-contact .btn ion-icon {
+  font-size: 1.2em; /* Adjust icon size */
+}
 /*-----------------------------------*\
   #REUSED STYLE
 \*-----------------------------------*/
