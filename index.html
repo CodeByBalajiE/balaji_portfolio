@@ -472,35 +472,111 @@
         </section>
       </article>
       
-
-      <!-- CONTACT -->
+<!-- CONTACT -->
       <article class="contact" data-page="contact">
         <header><h2 class="h2 article-title">Contact</h2></header>
-        <section class="mapbox" data-mapbox>
-          <figure>
-             <iframe
-               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248756.1168640628!2d80.04419859599999!3d13.047807850000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265ea4f7d3361%3A0x6e61a70b6863d433!2sChennai%2C%20Tamil%20Nadu%2C%20India!5e0!3m2!1sen!2sus!4v1678886543210!5m2!1sen!2sus"
-               width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </figure>
-        </section>
-        <section class="contact-form">
-          <h3 class="h3 form-title">Contact Form</h3>
-          <form action="#" class="form" data-form> <!-- REMEMBER: Needs backend/service for actual sending -->
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-            </div>
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-            <button class="form-btn" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
-          </form>
-        </section>
-      </article>
+      <!-- === START: CONTACT FORM SECTION (with EmailJS Integration) === -->
+<!-- === START: CONTACT FORM SECTION (Cleaned for External CSS) === -->
+<section class="contact-form">
+  <h3 class="h3 form-title">Contact Form</h3>
 
+  <!-- Modified Form for EmailJS -->
+  <form id="contact-form" class="form">
+    <div class="input-wrapper">
+      <!-- Inputs need 'name' attributes -->
+      <input type="text" name="fullname" class="form-input" placeholder="Full name" required>
+      <input type="email" name="email" class="form-input" placeholder="Email address" required>
     </div>
-  </main>
+
+    <textarea name="message" class="form-input" placeholder="Your Message" required></textarea>
+
+    <!-- Button: Added ID -->
+    <button id="submit-button" class="form-btn btn btn-primary" type="submit">
+      <ion-icon name="paper-plane"></ion-icon>
+      <span id="button-text">Send Message</span>
+    </button>
+
+    <!-- Message Area for feedback - classes will be added by JS -->
+    <div id="form-message"></div>
+
+  </form>
+
+  <!-- EmailJS SDK - Include this only ONCE in your entire HTML document -->
+  <!-- If you already have it elsewhere (e.g., near </body>), remove this line -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <!-- JavaScript for EmailJS Functionality -->
+  <script type="text/javascript">
+    (function() { // IIFE to keep scope clean
+      // --- Use your actual EmailJS details ---
+      const emailjsPublicKey = 'xhrJAAiV1CVB1JAPv';
+      const emailjsServiceID = 'service_g2ugkso';
+      const emailjsTemplateID = 'template_73vofqw';
+      // --- End of your details ---
+
+      // Initialize EmailJS
+      emailjs.init({ publicKey: emailjsPublicKey });
+
+      const contactForm = document.getElementById('contact-form');
+      const submitButton = document.getElementById('submit-button');
+      const buttonText = document.getElementById('button-text');
+      const formMessage = document.getElementById('form-message');
+
+      if (contactForm && submitButton && buttonText && formMessage) {
+        contactForm.addEventListener('submit', function(event) {
+          event.preventDefault(); // Stop default form submission
+
+          // ** Update UI before sending **
+          buttonText.textContent = 'Sending...';
+          submitButton.disabled = true;
+          formMessage.textContent = ''; // Clear previous messages
+          formMessage.className = ''; // Clear previous classes (like success/error/show)
+
+          // Send the form using EmailJS
+          emailjs.sendForm(emailjsServiceID, emailjsTemplateID, this) // 'this' is the form
+            .then(function(response) {
+                console.log('EmailJS SUCCESS!', response.status, response.text);
+                formMessage.textContent = 'Message sent successfully!';
+                formMessage.classList.add('success', 'show'); // Add success and show classes
+                contactForm.reset(); // Clear the form
+            }, function(error) {
+                console.error('EmailJS FAILED...', error);
+                formMessage.textContent = 'Failed to send message. Please try again.';
+                formMessage.classList.add('error', 'show'); // Add error and show classes
+            })
+            .finally(function() {
+                // ** Restore button state **
+                buttonText.textContent = 'Send Message';
+                submitButton.disabled = false;
+                // Optional: Auto-clear message after 5 seconds
+                 setTimeout(() => {
+                    formMessage.classList.remove('show');
+                    // Optional: Clear text content after fade out
+                    // setTimeout(() => { formMessage.textContent = ''; formMessage.className = '';}, 300);
+                 }, 5000);
+            });
+        });
+      } else {
+        console.error("Could not find all required elements for the contact form.");
+      }
+    })(); // Immediately invoke the function
+  </script>
+
+</section>
+<!-- === END: CONTACT FORM SECTION === -->
+<!-- === END: CONTACT FORM SECTION === -->
+</section> <!-- End of contact-form section -->
+
+<!-- === START: Resume Download Link === -->
+<div class="resume-download-contact">
+   <a href="/balajie_resume.pdf" download="Balaji_E_Resume.pdf" class="btn btn-secondary">
+     <ion-icon name="download-outline"></ion-icon>
+     <span>Download My Resume</span>
+   </a>
+</div>
+<!-- === END: Resume Download Link === -->
+
+</article> <!-- End of Contact article -->
 
   <!-- custom js link -->
   <script src="./assets/js/script.js"></script> <!-- Use the corrected JS from the previous step -->
